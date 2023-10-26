@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+
+/* FUNCTIONS */
+/* FUNCTIONS */
+/* MAIN-POSTS */
+.main-posts {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.main-posts .inner-main-posts {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 104px 50px 104px;
+}
+.main-posts .inner-main-posts .main-posts-right .main-post-details .post-info {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 1rem;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+.main-posts .inner-main-posts .main-posts-right .main-post-details .post-info .category a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: #FFFFFF;
+}
+.main-posts .inner-main-posts .main-posts-right .main-post-details .post-info .category a:hover {
+  color: #cfcfcf;
+}
+.main-posts .inner-main-posts .main-posts-right .main-post-details .article-title {
+  font-size: 3.875rem;
+  line-height: 120%;
+  color: #FFFFFF;
+  width: 608px;
+}
+.main-posts .inner-main-posts .main-posts-right .main-post-details .article-title a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: #FFFFFF;
+}
+.main-posts .inner-main-posts .main-posts-right .main-post-details .article-title a:hover {
+  color: #cfcfcf;
+}
+.main-posts .inner-main-posts .other-posts {
+  display: flex;
+  gap: 25px;
+}
+.main-posts .inner-main-posts .other-posts .other-posts-item {
+  width: 296px;
+  height: 185px;
+  margin-top: 120px;
+}
+.main-posts .inner-main-posts .other-posts .other-posts-item .inner-post-item {
+  margin: 16px;
+}
+.main-posts .inner-main-posts .other-posts .other-posts-item .inner-post-item .image-link .post-image {
+  margin-top: 15px;
+  width: 120px;
+  height: 80px;
+}
+.main-posts .inner-main-posts .other-posts .other-posts-item .inner-post-item .article-title {
+  margin-top: 15px;
+  font-size: 1rem;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+.main-posts .inner-main-posts .other-posts .other-posts-item .inner-post-item .article-title a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: #FFFFFF;
+}
+.main-posts .inner-main-posts .other-posts .other-posts-item .inner-post-item .article-title a:hover {
+  color: #cfcfcf;
+}
+.main-posts .inner-main-posts .other-posts .active-post {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  border-left: 4px solid #109BE9;
+}
+.main-posts .inner-main-posts .latest-posts {
+  width: 504px;
+  height: 100%;
+  min-height: 693px;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+}
+.main-posts .inner-main-posts .latest-posts .inner-latest-posts {
+  margin: 24px;
+}
+.main-posts .inner-main-posts .latest-posts .inner-latest-posts .latest-posts-title {
+  font-size: 1.9375rem;
+  line-height: 120%;
+  letter-spacing: 0.005em;
+  color: #FFFFFF;
+}
+.main-posts .inner-main-posts .latest-posts .inner-latest-posts .latest-posts-item {
+  display: flex;
+  gap: 24px;
+}
+.main-posts .inner-main-posts .latest-posts .inner-latest-posts .latest-posts-item .image-link .latest-post-image {
+  width: 144px;
+  height: 104px;
+}
+.main-posts .inner-main-posts .latest-posts .inner-latest-posts .latest-posts-item .latest-posts-info {
+  display: flex;
+  gap: 11px;
+  font-size: 12px;
+  line-height: 110%;
+  color: #FFFFFF;
+}
+.main-posts .inner-main-posts .latest-posts .inner-latest-posts .latest-posts-item .latest-posts-info .category a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: #FFFFFF;
+}
+.main-posts .inner-main-posts .latest-posts .inner-latest-posts .latest-posts-item .latest-posts-info .category a:hover {
+  color: #cfcfcf;
+}
+.main-posts .inner-main-posts .latest-posts .inner-latest-posts .latest-posts-item .latest-article-title {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 120%;
+  color: #FFFFFF;
+}
+.main-posts .inner-main-posts .latest-posts .inner-latest-posts .latest-posts-item .latest-article-title a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: #FFFFFF;
+}
+.main-posts .inner-main-posts .latest-posts .inner-latest-posts .latest-posts-item .latest-article-title a:hover {
+  color: #cfcfcf;
+}
+
+/* MAIN-POSTS */
+/* LATEST NEWS */
+.latest-news {
+  margin: 120px 104px 154px 104px;
+}
+.latest-news .latest-news-top {
+  display: flex;
+  margin-bottom: 56px;
+  text-align: center;
+}
+.latest-news .latest-news-top .latest-title {
+  font-size: 31px;
+  margin: 0;
+  color: #11142D;
+}
+.latest-news .latest-news-top .all-btn {
+  margin-left: auto;
+}
+.latest-news .latest-news-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 53px;
+}
+.latest-news .latest-news-items .latest-news-item {
+  width: 296px;
+  height: 534px;
+}
+.latest-news .latest-news-items .latest-news-item .inner-img {
+  position: relative;
+}
+.latest-news .latest-news-items .latest-news-item .inner-img img {
+  width: 296px;
+  height: 312px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.latest-news .latest-news-items .latest-news-item .inner-img .category-wrapper {
+  background: #FFFFFF;
+  position: absolute;
+  width: 76px;
+  height: 40px;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+}
+.latest-news .latest-news-items .latest-news-item .inner-img .category-wrapper .news-category {
+  font-size: 12px;
+  line-height: 110%;
+}
+.latest-news .latest-news-items .latest-news-item .inner-img .category-wrapper .news-category a {
+  color: #9A9AB0;
+  text-decoration: none;
+}
+.latest-news .latest-news-items .latest-news-item .news-details {
+  margin: 16px;
+}
+.latest-news .latest-news-items .latest-news-item .news-details .news-title {
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-size: 24px;
+  line-height: 120%;
+  color: #333333;
+}
+.latest-news .latest-news-items .latest-news-item .news-details .news-title a {
+  color: #333333;
+  text-decoration: none;
+}
+.latest-news .latest-news-items .latest-news-item .news-details .news-bottom {
+  margin-top: 74px;
+  display: flex;
+  gap: 30px;
+  font-size: 12px;
+  line-height: 110%;
+  color: #9A9AB0;
+}
+.latest-news .latest-news-items .latest-news-item .news-details .news-bottom p {
+  margin: 0;
+}
+.latest-news .latest-news-items .latest-news-item .news-details .news-bottom p a {
+  color: #9A9AB0;
+  text-decoration: none;
+}
+
+/* LATEST NEWS *//*# sourceMappingURL=home.css.map */

@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap");
+
+/* FUNCTIONS */
+/* FUNCTIONS */
+* {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+}
+
+.button {
+  background: #F3692E;
+  border: none;
+  border-radius: 8px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.875rem 1.5rem 0.875rem 1.5rem;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #a35331;
+  color: #bbb6b6;
+}
+
+/* HEADER */
+.header .header-upper {
+  background: #3C3C3C;
+  padding-left: 6.5rem;
+  padding-right: 6.5rem;
+  height: 72px;
+}
+.header .header-upper,
+.header .header-lower {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header-upper .category ul,
+.header .header-upper .social ul,
+.header .header-upper .navbar ul,
+.header .header-lower .category ul,
+.header .header-lower .social ul,
+.header .header-lower .navbar ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.header .header-upper .category ul li,
+.header .header-upper .social ul li,
+.header .header-upper .navbar ul li,
+.header .header-lower .category ul li,
+.header .header-lower .social ul li,
+.header .header-lower .navbar ul li {
+  margin-right: 2.5rem;
+}
+.header .header-upper .category ul li a,
+.header .header-upper .social ul li a,
+.header .header-upper .navbar ul li a,
+.header .header-lower .category ul li a,
+.header .header-lower .social ul li a,
+.header .header-lower .navbar ul li a {
+  font-size: 1rem;
+  text-decoration: none;
+  transition: 0.3s;
+  color: #FFFFFF;
+}
+.header .header-upper .category ul li a:hover,
+.header .header-upper .social ul li a:hover,
+.header .header-upper .navbar ul li a:hover,
+.header .header-lower .category ul li a:hover,
+.header .header-lower .social ul li a:hover,
+.header .header-lower .navbar ul li a:hover {
+  color: #d1cfcf;
+}
+.header hr {
+  margin: 0;
+  border-bottom: 1px;
+}
+.header .header-lower {
+  background: #1B3338;
+  padding-left: 16.875rem;
+  padding-right: 9rem;
+  height: 68px;
+}
+.header .header-lower .navbar ul li {
+  margin-right: 3rem;
+}
+.header .header-lower .lower-right {
+  display: flex;
+  gap: 32px;
+}
+.header .header-lower .lower-right .search {
+  cursor: pointer;
+}
+.header .header-lower .lower-right .search:hover {
+  color: #706b6b;
+}
+.header .search-wrapper {
+  background: #1B3338;
+  padding-left: 16.875rem;
+  padding-right: 9rem;
+  height: 68px;
+}
+.header .search-wrapper form {
+  display: flex;
+  flex-direction: row;
+  padding-top: 12px;
+  gap: 10px;
+}
+.header .search-wrapper form input[type=text] {
+  border-radius: 8px;
+  border: 1px solid #9A9AB0;
+  background: #FFFFFF;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: #9A9AB0;
+  padding: 10px 14px 10px 14px;
+  margin-left: 8px;
+  width: 80%;
+}
+.header .search-wrapper form input[type=submit] {
+  align-self: center;
+  background: #F3692E;
+  border: none;
+  border-radius: 8px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 14px 10px 14px;
+  width: 150px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header .search-wrapper form input[type=submit]:hover {
+  background: #a35331;
+  color: #bbb6b6;
+}
+
+/* HEADER */
+/* NEWSLETTER */
+.newsletter {
+  margin: 0 104px 154px 104px;
+}
+.newsletter .inner-newsletter {
+  background: #109BE9;
+  padding: 104px;
+}
+.newsletter .inner-newsletter .newsletter-info {
+  display: flex;
+  justify-content: space-between;
+}
+.newsletter .inner-newsletter .newsletter-info .newsletter-title {
+  margin: 0;
+  font-size: 62px;
+  line-height: 120%;
+  color: #FFFFFF;
+  width: 504px;
+}
+.newsletter .inner-newsletter .newsletter-info .newsletter-desc {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+  padding: 50px 0;
+  color: #FFFFFF;
+  width: 316px;
+  top: 5px;
+}
+.newsletter .inner-newsletter .newsletter-form {
+  display: flex;
+  justify-content: space-between;
+}
+.newsletter .inner-newsletter .newsletter-form input[type=email] {
+  border-radius: 8px;
+  border: none;
+  background: #FFFFFF;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: #9A9AB0;
+  padding: 18px 24px 18px 24px;
+  margin-left: 8px;
+  width: 80%;
+}
+.newsletter .inner-newsletter .newsletter-form input[type=submit] {
+  border: none;
+  border-radius: 8px;
+  background: #F36326;
+  padding: 18.5px 24px 18.5px 24px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  color: #FFFFFF;
+  transition: 0.3s;
+}
+.newsletter .inner-newsletter .newsletter-form input[type=submit]:hover {
+  background: #a35331;
+  color: #bbb6b6;
+}
+
+/* NEWSLETTER */
+/* FOOTER */
+.footer {
+  margin: 0 104px 0 104px;
+}
+.footer .inner-footer .footer-nav {
+  margin-left: 25%;
+  margin-right: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .inner-footer .footer-nav .nav-col h2 {
+  margin-bottom: 0;
+}
+.footer .inner-footer .footer-nav .nav-col ul {
+  margin-top: 24px;
+  padding: 0;
+  list-style-type: none;
+}
+.footer .inner-footer .footer-nav .nav-col ul li {
+  margin-bottom: 16px;
+}
+.footer .inner-footer .footer-nav .nav-col ul li a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: #515151;
+}
+.footer .inner-footer .copyright {
+  margin: 45px 0 45px 0;
+  text-align: center;
+}
+
+/* FOOTER *//*# sourceMappingURL=main.css.map */

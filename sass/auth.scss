@@ -1,0 +1,72 @@
+.main-content {
+    margin-top: 5%;
+    margin-bottom: 15%;
+    display: flex;
+    justify-content: center;
+
+    .content-wrapper {
+        border: 1px solid grey;
+        background: #fdfdfd;
+        border-radius: 10px;
+        padding: 100px 50px 100px 50px;
+        display: flex;
+        flex-direction: row;
+        
+
+        .auth-section,
+        .reg-section {
+            form {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+
+                input[type="text"],
+                input[type="email"],
+                input[type="password"] {
+                    border-radius: 8px;
+                    border: 1px solid #9A9AB0;
+                    background: #FFFFFF;
+
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 125%;
+                    color: #9A9AB0;
+
+                    padding: 18px 24px 18px 24px;
+                    margin-left: 8px;
+                    width: 350px;
+                }
+
+                input[type="submit"] {
+                    align-self: center;
+                    background: #F3692E;
+                    border: none;
+                    border-radius: 8px;
+
+                    font-family: 'Mulish';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    text-align: center;
+
+                    padding: 14px 24px 14px 24px;
+                    width: 200px;
+
+                    color: #ffffff;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+
+                input[type="submit"]:hover {
+                    background: #a35331;
+                    color: #bbb6b6;
+                    
+                }
+            }
+
+            .auth-form {
+                row-gap: 25px;
+            }
+        }
+    }
+}
