@@ -18,7 +18,7 @@ if (isset($_POST["submit"])) {
     $signup->signupUser();
 
     // Going back to page
-    header("location: ../../home.php");
+    header("location: ../../auth.php?successful-signup");
 
 }
 

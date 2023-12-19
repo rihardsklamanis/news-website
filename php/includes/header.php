@@ -1,3 +1,10 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION["ID"]) && $_SESSION["role"] == 5) {
+        header("location: ../../banned.php?error=userisbanned");
+    }
+?>
 <header class="header">
     <div class="header-upper">
         <nav class="category">
@@ -7,6 +14,7 @@
                 <li><a href="news.php?category=Hardware">Hardware</a></li>
                 <li><a href="news.php?category=Innovation">Innovation</a></li>
                 <li><a href="news.php?category=Gaming">Gaming</a></li>
+                
             </ul>
         </nav>
         <div class="social">
@@ -23,17 +31,21 @@
         <nav class="navbar">
             <ul>
                 <li><a href="home.php">Home</a></li>
-                <li><a href="#">Feature</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
+                <?php 
+                if (isset($_SESSION["role"]) && ($_SESSION["role"] == 2 || $_SESSION["role"] == 3 || $_SESSION["role"] == 4)) {
+                    ?> <li><a href="users.php">Admin</a></li> <?php
+                }
+
+                ?>
             </ul>
         </nav>
         <div class="lower-right">
             <?php
-            session_start();
             if (isset($_SESSION["ID"])) {
             ?>
-                <a href="/profile"><button class="button auth-btn">Profile</button></a>
+                <a href="php/includes/logout.php"><button class="button auth-btn">Logout</button></a>
             <?php } else { ?>
                 <a href="/auth.php"><button class="button auth-btn">Authorization</button></a>
             <?php } ?>

@@ -14,7 +14,7 @@ class Login extends Dbh
 
         if ($stmt->rowCount() == 0) {
             $stmt = null;
-            header("location: ../../home.php?error=usernotfound");
+            header("location: ../../auth.php?error=usernotfound");
             exit();
         }
 
@@ -23,7 +23,7 @@ class Login extends Dbh
 
         if ($checkPwd == false) {
             $stmt = null;
-            header("location: ../../home.php?error=wrongpassword");
+            header("location: ../../auth.php?error=wrongpassword");
             exit();
         } elseif ($checkPwd == true) {
             $stmt = $this->connect()->prepare('SELECT * FROM user WHERE Username = ? OR EMail = ? AND Password = ?;');
@@ -36,7 +36,7 @@ class Login extends Dbh
 
             if ($stmt->rowCount() == 0) {
                 $stmt = null;
-                header("location: ../../home.php?error=usernotfound");
+                header("location: ../../auth.php?error=usernotfound");
                 exit();
             }
 
@@ -46,7 +46,7 @@ class Login extends Dbh
             $_SESSION["ID"] = $user[0]["ID"];
             $_SESSION["Username"] = $user[0]["Username"];
             $_SESSION["Email"] = $user[0]["EMail"];
-            $_SESSION["Admin"] = $user[0]["admin"];
+            $_SESSION["role"] = $user[0]["Role_ID"];
 
             $stmt = null;
         }

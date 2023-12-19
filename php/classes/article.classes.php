@@ -110,6 +110,100 @@ class Article extends Dbh {
                 </div>
         <?php } 
     }
+
+    function countArticles() {
+        $stmt = $this->connect()->prepare("SELECT COUNT(ID) as 'count' FROM article");
+
+        if (!$stmt->execute()) {
+            $stmt = null;
+            header("location: ../../articles.php?error=stmtfailed");
+            exit();
+        }
+        if ($stmt->rowCount() == 0) {
+            $stmt = null;
+            ?>
+            
+            <?php exit();
+        }
+        $articlecount= $stmt->fetch(PDO::FETCH_ASSOC);
+
+        echo $articlecount["count"];
+    }
+
+    function outputArticles() {
+
+        $stmt = $this->connect()->prepare("SELECT a.ID AS 'ID', a.Title AS 'Title', u.Username AS 'Author', c.Name AS 'Category', a.PostDate AS 'Postdate',
+        (SELECT COUNT(ID) FROM comments WHERE News_ID = a.ID) AS Comments
+        FROM article AS a
+        INNER JOIN user AS u ON a.Author_ID = u.ID
+        INNER JOIN category AS c ON a.Category_ID = c.ID;");
+
+        // Test if statement executed
+        if (!$stmt->execute()) {
+            $stmt = null;
+            header("location: ../../articles.php?error=stmtfailed");
+            exit();
+        }
+
+        // Check if statement returns anything
+        if ($stmt->rowCount() == 0) {
+            $stmt = null;
+            exit();
+        }
+
+        // Fetch all results into $news array
+        $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        // Free result from memory
+        $stmt = null; ?>
+
+        <div class="article-data">
+            <div class="data title">
+                <span class="data-title">Article Title</span>
+            <?php
+            foreach($articles as $article){ ?>
+                <span class="data-list"><?php echo $article['Title'] ?></span>
+            <?php } ?>
+            </div>
+            <div class="data names">
+                <span class="data-title">Author</span> <?php
+            foreach($articles as $article){ ?>
+                <span class="data-list"><?php echo $article['Author'] ?></span>
+            <?php } ?>
+            </div>
+            <div class="data names">
+                <span class="data-title">Category</span> <?php
+                foreach($articles as $article){ ?>
+                <span class="data-list"><?php echo $article['Category'] ?></span>
+            <?php } ?>
+            </div>
+            <div class="data postdate">
+                <span class="data-title">Post Date</span> <?php
+                foreach($articles as $article){ ?>
+                <span class="data-list"><?php echo $article['Postdate'] ?></span>
+            <?php } ?>
+            </div>
+            <div class="data comments">
+                <span class="data-title">Comments</span> <?php
+                foreach($articles as $article){ ?>
+                <span class="data-list"><?php echo $article['Comments'] ?></span>
+            <?php } ?>
+            </div>
+            <div class="data type">
+                <span class="data-title">Edit Article</span> <?php
+                foreach($articles as $article){ ?>
+                <span class="data-list"><a href="editArticle.php?id=<?php echo $article['ID'] ?>">Edit</a></span>
+            <?php } ?>
+            </div>
+            <div class="data status">
+                <span class="data-title">Remove Article</span> <?php
+                foreach($articles as $article){ ?>
+                <span class="data-list"><a href="php/includes/removeArticle.php?id=<?php echo $article['ID'] ?>">Remove</a></span>
+            <?php } ?>
+            </div>
+        </div>
+        <?php
+    }
 }
 
 ?>

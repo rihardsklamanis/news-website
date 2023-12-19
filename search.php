@@ -52,7 +52,7 @@
 
     <main class="main-content">
 
-<article class="latest-news">
+        <article class="latest-news">
             <div class="latest-news-top">
                 <h4 class="latest-title">
                     Our Latest Posts

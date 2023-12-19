@@ -6,11 +6,11 @@ include '../classes/dbh.classes.php';
 $dbh = new Dbh();
 
 
-$title = $_POST['title'];
-$textarea = $_POST['textarea'];
+$title = $_POST['article-title'];
+$textarea = $_POST['article-content'];
 $author = $_SESSION["ID"];
-$category = $_POST['category'];
-$target_dir = "../../Images/";
+$category = $_POST['categories'];
+$target_dir = "../../images/";
 
 $target_file = $target_dir . basename($_FILES["imageToUpload"]["name"]);
 move_uploaded_file($_FILES["imageToUpload"]["tmp_name"], $target_file);
@@ -25,8 +25,7 @@ if (!$stmt->execute(array($title, $textarea, $imageUrl, $author, $category))) {
 
     exit();
 }
-header("location: ../../admin.php?ArticleInserted");
-mysqli_close($conn);
+header("location: ../../addarticles.php?ArticleInserted");
 
 
 ?>
